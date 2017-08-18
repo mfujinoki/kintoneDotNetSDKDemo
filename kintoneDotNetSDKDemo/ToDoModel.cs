@@ -7,14 +7,15 @@ namespace kintoneDotNetSDKDemo
     public class ToDoModel : AbskintoneModel
     {
         [kintoneItem(isUpload = false, isKey = true)]
-        public override string record_id { get; set; }
+        public override string record_id { get; set; } //kintoneで自動生成されるレコードID
         [kintoneItem()]
-        public DateTime Duedate { get; set; }
+        public DateTime Duedate { get; set; } //締切日フィールド
         [kintoneItem()]
-        public DateTime From { get; set; }
+        public DateTime From { get; set; }　//開始日フィールド
         [kintoneItem()]
-        public int days_remaining { get; set; }
+        public int days_remaining { get; set; } //残り日数フィールド
 
+        //kintoneのApp IDをApp.Configファイルから取得
         private string _app = ConfigurationManager.AppSettings["toDoAppId"];
         public override string app
         {

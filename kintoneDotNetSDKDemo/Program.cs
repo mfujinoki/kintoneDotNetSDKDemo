@@ -9,7 +9,7 @@ namespace kintoneDotNetSDKDemo
         {
             updateDaysRemaining();
 
-            Console.ReadLine();//テスト用
+            Console.ReadLine();//テスト用、実用時には削除
         }
         static void updateDaysRemaining()
         {
